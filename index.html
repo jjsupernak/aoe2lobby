@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AOE 2.0 lobby</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <h1>You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</h1>
+        <![endif]-->
+
+        <div id="wrapper">
+            <header>
+                <h1>Multiplayer Game</h1>
+            </header>
+        
+            <div id="players_table_wrapper">
+                <table id="players_table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="light">Name</th>
+                            <th>Ping</th>
+                            <th colspan="2">Civilization</th>
+                            <th colspan="2">Player</th>
+                            
+                            <th>Team</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td><span class="player_name">Player</span></td>
+                            <td><span class="player_ping"></span></td>
+                            <td><div class="button"></div></td>
+                            <td><span class="player_civilization">Random</span></td>
+                            <td><div class="button_square"><span class="lorem player_color">1</span></div></td>
+                            <td><span class="player_version">CD 2.0</span></td>
+                            <td><div class="button_square"><span class="lorem player_team">-</span></div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="button"></div></td>
+                            <td><span class="slot">Open</span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="button"></div></td>
+                            <td><span class="slot">Open</span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="button"></div></td>
+                            <td><span class="slot">Open</span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="button"></div></td>
+                            <td><span class="slot">Open</span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="button"></div></td>
+                            <td><span class="slot">Open</span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="button"></div></td>
+                            <td><span class="slot">Open</span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="button"></div></td>
+                            <td><span class="slot">Open</span></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="slot" class="hidden dropdown">
+                    <ul>
+                        <li><a href="#">Computer</a></li>
+                        <li><a href="#">Closed</a></li>
+                        <li><a href="#">Open</a></li>
+                    </ul>
+                </div>
+                <div id="civilization" class="hidden dropdown">
+                    <ul>
+                        <li><a href="#">Aztecs</a></li>
+                        <li><a href="#">Britons</a></li>
+                        <li><a href="#">Byzantines</a></li>
+                        <li><a href="#">Celts</a></li>
+                        <li><a href="#">Chinese</a></li>
+                        <li><a href="#">Franks</a></li>
+                        <li><a href="#">Goths</a></li>
+                        <li><a href="#">Huns</a></li>
+                        <li><a href="#">Incas</a></li>
+                        <li><a href="#">Indians</a></li>
+                        <li><a href="#">Japanese</a></li>
+                        <li><a href="#">Korean</a></li>
+                        <li><a href="#">Mayans</a></li>
+                        <li><a href="#">Persians</a></li>
+                        <li><a href="#">Saracens</a></li>
+                        <li><a href="#">Spanish</a></li>
+                        <li><a href="#">Teutons</a></li>
+                        <li><a href="#">Turks</a></li>
+                        <li><a href="#">Vikings</a></li>
+                        <li><a href="#">Random</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="chat_wrapper">
+                <h3>Chat</h3>
+                <div id="chat">
+                    <div id="chat_messages"></div>
+                    <div id="chat_scrollbar">
+                        <div id="button_scrollup"></div>
+                        <div id="button_scrollbar"></div>
+                        <div id="button_scrolldown"></div>
+                    </div>
+                        <input id="chat_input"></input>
+                    </div>
+            </div>
+            
+            <div id="bottom_wrapper">
+                <div id="ready">
+                    <div id="button_ready">
+                        <div id="tick" class="hidden"></div>
+                    </div>
+                    <h2>I'm Ready!</h2>
+                    <div id="button_foldery"></div>
+                    <div id="button_ip"></div>
+                    <div id="button_startgame"></div>
+                    <div id="button_cancel"></div>
+                </div>
+            </div>
+
+            <div id="rightsection">
+                 <h2>Game Settings</h2>
+                 <div id="button_reset"></div>
+                 <ul>
+                    <li>
+                        <div class="button"></div>
+                        <ul>
+                            <li>
+                                <p class="settings_choice">Random Maps</p>
+                            </li>
+                            <li>
+                                <ul class="settings_choices hidden">
+                                    <li><a href="#">Random Maps</a></li>
+                                    <li><a href="#">Capture the Flag</a></li>
+                                    <li><a href="#">Deathmatch</a></li>
+                                    <li><a href="#">Team Deathmatch</a></li>
+                                 </ul>
+                            </li>
+                        </ul>
+                        <p class="settings_name">Game Type</p>
+                    </li>
+                    <li>
+                        <div class="button"></div>
+                        <ul>
+                            <li>
+                                <p class="settings_choice">Coastal</p>
+                            </li>
+                            <li>
+                                <ul class="settings_choices hidden">
+                                    <li><a href="#">Coastal</a></li>
+                                    <li><a href="#">Forest</a></li>
+                                    <li><a href="#">Mountains</a></li>
+                                    <li><a href="#">Fields</a></li>
+                                 </ul>
+                            </li>
+                        </ul>
+                        <p class="settings_name">Map Type</p>
+                    </li>
+                     <li>
+                        <div class="button"></div>
+                        <ul>
+                            <li>
+                                <p class="settings_choice">(Small 3 player)</p>
+                            </li>
+                            <li>
+                                <ul class="settings_choices hidden">
+                                    <li><a href="#">(Small 3 player)</a></li>
+                                    <li><a href="#">(Medium 4 player)</a></li>
+                                    <li><a href="#">(Big 6 player)</a></li>
+                                    <li><a href="#">(Giant 1337 player)</a></li>
+                                 </ul>
+                            </li>
+                        </ul>
+                        <p class="settings_name">Map Size</p>
+                    </li>
+                    <li>
+                        <div class="button"></div>
+                        <ul>
+                            <li>
+                                <p class="settings_choice">Easy</p>
+                            </li>
+                            <li>
+                                <ul class="settings_choices hidden">
+                                    <li><a href="#">Easy</a></li>
+                                    <li><a href="#">Medium</a></li>
+                                    <li><a href="#">Hard</a></li>
+                                    <li><a href="#">Inferno</a></li>
+                                 </ul>
+                            </li>
+                        </ul>
+                        <p class="settings_name">Difficulty</p>
+                    </li>
+                    <li>
+                        <div class="button"></div>
+                        <ul>
+                            <li>
+                                <p class="settings_choice">Standard</p>
+                            </li>
+                            <li>
+                                <ul class="settings_choices hidden">
+                                    <li><a href="#">Standard</a></li>
+                                    <li><a href="#">Low</a></li>
+                                    <li><a href="#">Just enough</a></li>
+                                    <li><a href="#">Unlimited</a></li>
+                                 </ul>
+                            </li>
+                        </ul>
+                        <p class="settings_name">Resources</p>
+                    </li>
+                    <li>
+                        <div class="button"></div>  
+                        <ul>
+                            <li>
+                                <p class="settings_choice">200</p>
+                            </li>
+                            <li>
+                                <ul class="settings_choices hidden">
+                                    <li><a href="#">200</a></li>
+                                    <li><a href="#">150</a></li>
+                                    <li><a href="#">100</a></li>
+                                    <li><a href="#">50</a></li>
+                                 </ul>
+                            </li>
+                        </ul>
+                        <p class="settings_name">Population</p>
+                    </li>
+                    <li>
+                        <div class="button"></div>  
+                        <ul>
+                            <li>
+                                <p class="settings_choice">Fast</p>
+                            </li>
+                            <li>
+                                <ul class="settings_choices hidden">
+                                    <li><a href="#">Fast</a></li>
+                                    <li><a href="#">Faster</a></li>
+                                    <li><a href="#">Fastest</a></li>
+                                 </ul>
+                            </li>
+                        </ul>
+                        <p class="settings_name">Game Speed</p>
+                    </li>
+                    <li>
+                        <div class="button"></div>
+                        <ul>
+                            <li>
+                                <p class="settings_choice">Normal</p>
+                            </li>
+                            <li>
+                                <ul class="settings_choices hidden">
+                                    <li><a href="#">Normal</a></li>
+                                    <li><a href="#">Reveal</a></li>
+                                 </ul>
+                            </li>
+                        </ul>
+                        <p class="settings_name">Reveal Map</p>      
+                    </li>
+                    <li>
+                        <div class="button"></div>
+                        <ul>
+                            <li>
+                                <p class="settings_choice">Standard</p>
+                            </li>
+                            <li>
+                                <ul class="settings_choices hidden">
+                                    <li><a href="#">Standard</a></li>
+                                    <li><a href="#">Bronze Age</a></li>
+                                    <li><a href="#">Feudal Age</a></li>
+                                    <li><a href="#">Castle Age</a></li>
+                                 </ul>
+                            </li>
+                        </ul>
+                        <p class="settings_name">Starting Age</p>    
+                    </li>
+                    <li>
+                        <div class="button"></div>
+                        <ul>
+                            <li>
+                                <p class="settings_choice">Standard</p>
+                            </li>
+                            <li>
+                                <ul class="settings_choices hidden">
+                                    <li><a href="#">Standard</a></li>
+                                    <li><a href="#">Build a Wonder</a></li>
+                                 </ul>
+                            </li>
+                        </ul>
+                        <p class="settings_name">Victory</p>   
+                    </li>
+                 </ul>
+
+                 <ul class="settings2">
+                    <li id="settings2_1">
+                        <div class="button2 hidden"></div>
+                        <div class="button2_tick"></div>
+                        <div class="button2_ready hidden"></div>
+                        <div class="button2_tick_ready hidden"></div>
+                        <p class="settings_name">Team Together</p>
+                    </li>
+                    <li id="settings2_2">
+                        <div class="button2"></div>
+                        <div class="button2_tick hidden"></div>
+                        <div class="button2_ready hidden"></div>
+                        <div class="button2_tick_ready hidden"></div>
+                        <p class="settings_name">Lock Teams</p> 
+                    </li>
+                    <li id="settings2_3">
+                        <div class="button2"></div>
+                        <div class="button2_tick hidden"></div>
+                        <div class="button2_ready hidden"></div>
+                        <div class="button2_tick_ready hidden"></div>
+                        <p class="settings_name">All Techs</p>
+                    </li>
+                    <li id="settings2_4">
+                        <div class="button2"></div>
+                        <div class="button2_tick hidden"></div>
+                        <div class="button2_ready hidden"></div>
+                        <div class="button2_tick_ready hidden"></div>
+                        <p class="settings_name">Lock Speed</p></li>
+                    <li id="settings2_5">
+                        <div class="button2"></div>
+                        <div class="button2_tick hidden"></div>
+                        <div class="button2_ready bottom hidden"></div>
+                        <div class="button2_tick_ready bottom hidden"></div>
+                        <p class="settings_name">Allow Cheats</p>
+                    </li>
+                    <li id="settings2_6">
+                        <div class="button2"></div>
+                        <div class="button2_tick hidden"></div>
+                        <div class="button2_ready bottom hidden"></div>
+                        <div class="button2_tick_ready bottom hidden"></div>
+                        <p class="settings_name">Record Game</p>
+                    </li>
+                 </ul>
+            </div>
+
+            <div id="infobar">
+                <p id="info"></p>
+            </div>
+
+            <div id="button_exit"></div>
+        </div>
+
+        <audio id="audio1"><source src="sounds/1.wav"></source></audio>
+        <audio id="audio2"><source src="sounds/2.wav"></source></audio>
+        <audio id="audio3"><source src="sounds/3.wav"></source></audio>
+        <audio id="audio4"><source src="sounds/4.wav"></source></audio>
+        <audio id="audio5"><source src="sounds/5.wav"></source></audio>
+        <audio id="audio6"><source src="sounds/6.wav"></source></audio>
+        <audio id="audio7"><source src="sounds/7.wav"></source></audio>
+        <audio id="audio8"><source src="sounds/8.wav"></source></audio>
+        <audio id="audio9"><source src="sounds/9.wav"></source></audio>
+        <audio id="audio10"><source src="sounds/10.wav"></source></audio>
+        <audio id="audio11"><source src="sounds/11.wav"></source></audio>
+        <audio id="audio12"><source src="sounds/12.wav"></source></audio>
+        <audio id="audio13"><source src="sounds/13.wav"></source></audio>
+        <audio id="audio14"><source src="sounds/14.wav"></source></audio>
+        <audio id="audio15"><source src="sounds/15.wav"></source></audio>
+        <audio id="audio16"><source src="sounds/16.wav"></source></audio>
+        <audio id="audio17"><source src="sounds/17.wav"></source></audio>
+        <audio id="audio18"><source src="sounds/18.wav"></source></audio>
+        <audio id="audio19"><source src="sounds/19.wav"></source></audio>
+        <audio id="audio20"><source src="sounds/20.wav"></source></audio>
+        <audio id="audio21"><source src="sounds/21.wav"></source></audio>
+        <audio id="audio22"><source src="sounds/22.wav"></source></audio>
+        <audio id="audio23"><source src="sounds/23.wav"></source></audio>
+        <audio id="audio24"><source src="sounds/24.wav"></source></audio>
+        <audio id="audio25"><source src="sounds/25.wav"></source></audio>
+        <audio id="audio26"><source src="sounds/26.wav"></source></audio>
+        <audio id="audio27"><source src="sounds/27.wav"></source></audio>
+        <audio id="audio28"><source src="sounds/28.wav"></source></audio>
+        <audio id="audio29"><source src="sounds/29.wav"></source></audio>
+        <audio id="audio30"><source src="sounds/30.wav"></source></audio>
+        <audio id="audio31"><source src="sounds/31.wav"></source></audio>
+        <audio id="audio32"><source src="sounds/32.wav"></source></audio>
+        <audio id="audio33"><source src="sounds/33.wav"></source></audio>
+        <audio id="audio34"><source src="sounds/34.wav"></source></audio>
+        <audio id="audio35"><source src="sounds/35.wav"></source></audio>
+        <audio id="audio36"><source src="sounds/36.wav"></source></audio>
+        <audio id="audio37"><source src="sounds/37.wav"></source></audio>
+        <audio id="audio38"><source src="sounds/38.wav"></source></audio>
+        <audio id="audio39"><source src="sounds/39.wav"></source></audio>
+        <audio id="audio40"><source src="sounds/40.wav"></source></audio>
+        <audio id="audio41"><source src="sounds/41.wav"></source></audio>
+        <audio id="audio42"><source src="sounds/42.wav"></source></audio>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

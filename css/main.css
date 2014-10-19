@@ -1,0 +1,697 @@
+/* ------------------ base styles ----------------- */
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* --------------- images preloading --------------- */
+
+body:before {
+    content: 
+        url('../img/button_pressed.png') 
+        url('../img/button_square_pressed.png') 
+        url('../img/button_startgame_pressed.png')
+        url('../img/button_cancel_pressed.png') 
+        url('../img/button_scrollup_pressed.png') 
+        url('../img/button_scrolldown_pressed.png') 
+        url('../img/button_scrollbar_pressed.png')
+        url('../img/button_ready_pressed.png')
+        url('../img/button_foldery_pressed.png')
+        url('../img/button_ip_pressed.png')
+        url('../img/button2_pressed.png')
+        url('../img/button2_tick_pressed.png')
+        url('../img/button_reset_pressed.png')
+        url('../img/button_exit_pressed.png');
+    display:none;
+}
+
+/* -------------------- document -------------------- */
+
+body {
+    background-color: black;
+}
+
+#wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+    height: 720px;
+    background-image: url('../img/aoe2_lobby_background.png');
+}
+
+header h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 34px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 7px;
+}
+
+/* --------------------- table --------------------- */
+
+#players_table_wrapper {
+    position: relative;
+    margin-left: 36px;
+}
+
+#players_table thead th, tbody td {
+    font-family: Arial, sans-serif;
+    font-weight: 100;
+}
+
+#players_table thead th{
+    font-size: 22px;
+}
+
+#players_table tbody td{
+    font-size: 17px;
+}
+
+#players_table td {
+    height: 29px;
+    padding: 0;
+}
+
+#players_table th {
+    text-align: left;
+}
+
+#players_table th:first-child {
+    width: 21px;
+    padding-right: 5px;
+}
+
+#players_table th:nth-child(2) {
+    width: 155px;
+}
+
+#players_table th:nth-child(3) {
+    width: 65px;
+}
+
+#players_table th:nth-child(4) {
+    width: 150px;
+}
+
+#players_table th:nth-child(5) {
+    width: 87px;
+    padding-left: 5px
+}
+
+#players_table th:nth-child(6) {
+    width: 21px;
+}
+
+#players_table th:nth-child(7) {
+    width: 68px;
+}
+
+#players_table td:nth-child(3) {
+    text-align: center;
+}
+
+#players_table td:nth-child(4) {
+    width: 21px;
+}
+
+#players_table td:nth-child(5) {
+    padding-left: 5px;
+}
+
+#players_table td:nth-child(6) {
+    width: 37px;
+    color: white;
+}
+
+#players_table td:nth-child(7) {
+    font-size: 13px;
+    text-align: right;
+}
+
+#players_table td:nth-child(8) {
+    padding-left: 2px;
+    color: white;
+}
+
+.button {
+    padding: 0;
+    height: 29px;
+    width: 21px;
+    background-image: url('../img/button.png');
+}
+
+.button:active {
+    background-image: url('../img/button_pressed.png');
+}
+
+.button_square {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    height: 29px;
+    width: 37px;
+    background-image: url('../img/button_square.png');
+    
+}
+.button_square:active {
+    background-image: url('../img/button_square_pressed.png');
+}
+
+.button_square:active span {
+    top:2px;
+    left:16px;
+}
+
+.button_square span {
+    position: absolute;
+    top:4px;
+    left:14px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.slot, .player_name, .player_ping {
+    text-shadow: -1px 2px black;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+.player_color, .player_team {
+    text-shadow: 1px 1px black;
+}
+
+.player_civilization {
+    font-family: "Times New Roman", Times, serif ;
+    font-weight: bold;
+    padding-left: 4px;
+}
+
+.slot {
+    color: #42ebd4;
+}
+
+.player_name {
+    color: #f9f600;
+}
+
+.player_color {
+
+    color:blue;
+}
+
+.player_version {
+    padding-right: 3px;
+}
+
+.player_ping {
+    color: #f9f600;
+}
+
+.dropdown {
+    position: absolute;
+    background-color: #6b5032;
+    border: 1px solid #ffdbaf;
+    border-radius: 2%;
+    z-index: 1;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    width: 120px;
+    text-shadow: 2px 2px black;
+    padding: 1px 1px 1px 1px;   
+}
+
+.dropdown ul li:hover {
+    border: 1px solid yellow;
+    padding: 0;
+    
+}
+
+a {
+    display: block;
+    font-size: 17px;
+    font-family: "Times New Roman", Times, serif ;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown ul li:hover a{
+    color: yellow;
+}
+
+.red {
+    color:red;
+}
+
+.yellow {
+    color: #f9f600;
+}
+
+/* --------------------- chat --------------------- */
+
+#chat_wrapper {
+    margin-top: 5px;
+    margin-left: 45px;
+}
+
+#chat_wrapper h3 {
+    padding: 0;
+    margin: 0;
+}
+
+#chat {
+    width: 546px;
+}
+
+#chat_messages {
+    float: left;
+    padding: 5px;
+    width:507px;
+    height: 160px;
+    background-color: #3e2c1b;
+    margin-bottom: 5px;
+    overflow:auto;  
+    overflow-y: hidden;
+    border: 1px solid gray;
+    opacity:0.7;
+}
+
+#chat_messages p {
+    margin: 0;
+    padding-top: 0px;
+    padding-left: 5px;
+    color: #e5e5e5;
+    font-size: 15px;
+    text-shadow: 2px 2px black;
+    font-family: "Times New Roman", Times, serif ;
+}
+
+#chat_scrollbar {
+    position: relative;
+    float: right;
+    width: 23px;
+    height: 170px;
+    background-color: #3e2c1b;
+    border: 1px solid gray;
+    opacity:0.7;
+
+}
+
+#button_scrollbar {
+    position: absolute;
+    background-image: url('../img/button_scrollbar.png');
+    background-repeat: no-repeat;
+    height: 19px;
+    width: 19px;
+    bottom: 23px;
+    left: 2px;
+}
+
+#button_scrollup, #button_scrolldown {
+    position: absolute;
+    height: 19px;
+    width: 19px;
+    left: 2px;
+}
+
+#button_scrollup {
+    background-image: url('../img/button_scrollup.png');
+    top: 2px;
+}
+
+#button_scrolldown {
+    background-image: url('../img/button_scrolldown.png');
+    bottom: 2px;
+}
+
+#button_scrollup:active {
+    background-image: url('../img/button_scrollup_pressed.png');
+}
+
+#button_scrolldown:active {
+    background-image: url('../img/button_scrolldown_pressed.png');
+}
+
+#button_scrollbar:active {
+    background-image: url('../img/button_scrollbar_pressed.png');
+}
+
+#chat_input {
+    width:538px;
+    height:20px;
+    background-color: black;
+    border: 1px solid gray;
+    color: white;
+    text-align: left;
+    opacity:0.88;
+    resize: none;
+    padding-left: 5px;
+    font-size: 15px;
+    text-shadow: 2px 2px black;
+    font-family: "Times New Roman", Times, serif ;
+    outline: none; 
+}
+
+/* --------------------- bottom left buttons --------------------- */
+
+#bottom_wrapper {
+    margin-top: 13px;
+    margin-left: 45px;
+}
+
+#ready {
+    position: relative;
+}
+
+#button_ready {
+    position: absolute;
+    background-image: url('../img/button_ready.png');
+    height: 45px;
+    width: 45px;
+    top: 0px;
+    left: 0px;
+}
+
+#button_ready:active {
+    background-image: url('../img/button_ready_pressed.png');
+}
+
+#tick {
+    position: absolute;
+    background-image: url('../img/tick.png');
+    height: 20px;
+    width: 22px;
+    top:12px;
+    left:12px;
+}
+
+#button_ready:active #tick {
+    top: 10px;
+    left: 14px;
+}
+
+#ready h2 {
+    font-family: "Arial", sans-serif;
+    font-weight: 100; 
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 7px;
+    left: 55px;
+}
+
+#button_foldery {
+    position: absolute;
+    background-image: url('../img/button_foldery.png');
+    height: 45px;
+    width: 45px;
+    top: 12px;
+    left: 316px;
+}
+
+#button_foldery:active {
+    background-image: url('../img/button_foldery_pressed.png');
+}
+
+#button_ip {
+    position: absolute;
+    background-image: url('../img/button_ip.png');
+    height: 45px;
+    width: 45px;
+    top: 12px;
+    left: 366px;
+}
+
+#button_ip:active {
+    background-image: url('../img/button_ip_pressed.png');
+}
+
+#button_startgame {
+    position: absolute;
+    background-image: url('../img/button_startgame.png');
+    height: 45px;
+    width: 198px;
+    top: 89px;
+    left: 0px;
+}
+
+#button_startgame:active {
+    background-image: url('../img/button_startgame_pressed.png');
+}
+
+#button_cancel {
+    position: absolute;
+    background-image: url('../img/button_cancel.png');
+    height: 45px;
+    width: 198px;
+    top: 89px;
+    left: 215px;
+}
+
+#button_cancel:active {
+    background-image: url('../img/button_cancel_pressed.png');
+}
+
+/* --------------------- bottom right infobar --------------------- */
+
+#infobar {
+    position: absolute;
+    background-image: url('../img/infobar.png');
+    background-repeat: no-repeat;
+    height: 150px;
+    width:498px;
+    right: 0;
+    bottom: 0px;  
+}
+
+#infobar p {
+    position:absolute;
+    top: 20px;
+    left: 12px;
+    color: #e6d1be;
+    font-family: "Times New Roman", Times, serif ;
+    font-weight: 100; 
+    text-shadow: 1px 1px black;
+    font-size:  17px;
+}
+
+/* --------------------- right section settings --------------------- */
+
+#rightsection {
+    background-image: url('../img/rightsection.png');
+    position: absolute;
+    width: 358px;
+    height: 536px;
+    right:0px;
+    top:60px;
+    z-index: 99999;
+}
+
+#rightsection h2 {
+    float: left;
+    margin: 3px 10px 5px 30px;
+}
+
+
+#rightsection ul {
+    float: right;
+    margin: 0 22px 0 0px;
+    padding: 0;
+    list-style: none;
+}
+
+#rightsection ul li {
+    margin: 0 0 0 0;
+    margin-bottom: 5px;
+    padding: 0;
+    clear: both;
+}
+
+#rightsection ul ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+#rightsection .settings_name {
+    font-family: "Times New Roman";
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+    margin: 0;
+    padding: 2px 2px 2px 0;
+}
+
+#rightsection .settings_choice {
+    width: 175px;
+    float: right;
+    margin: 0 0px 0 4px;
+    padding: 2px 1px 2px 5px;
+    background-color: #3e2c1b;
+    opacity: 0.7;
+    font-family: "Times New Roman", Times, serif ;
+    font-size: 18px;
+    font-weight: 100;
+    color: #fbf2d5;
+    text-shadow: -1px 2px black;
+    text-align: left;
+}
+
+.ready {
+    background-color: white;
+    color: white;
+}
+
+#rightsection .button {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+.settings_choices {
+    position:absolute;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+}
+
+#rightsection .settings_choices li {
+    width: 176px;
+    margin: 0 1px 0 4px;
+    padding: 2px 0 2px 5px;
+    background-color: #3e2c1b;
+    font-family: "Times New Roman", Times, serif ;
+    font-size: 18px;
+    font-weight: 100;
+    color: #fbf2d5;
+    text-shadow: -1px 2px black;
+    text-align: left;
+    border-top: 1px solid black;
+    
+}
+
+#rightsection .settings_choices li a {
+    font-family: "Times New Roman";
+    font-size: 18px;
+    font-weight: 100;
+    color: #dec6aa;
+
+    text-shadow: -1px 2px black;
+}
+
+#rightsection .settings_choices li:hover {
+    background-color: #302518;
+}
+
+#rightsection .settings2 {
+    margin: 45px 0 0 10px;
+    float: left;
+}
+
+#rightsection .settings2 li {
+    padding: 0px;
+    margin: 0px;
+    width: 155px;
+    display: inline;
+    float: left;
+    clear: none;
+    font-weight: bold;
+}
+
+#rightsection .settings2 p {
+    margin-right: 5px;
+} 
+
+.button2, .button2_ready, .button2_tick, .button2_tick_ready {
+    float: right;
+    height: 33px;
+    width: 29px;
+    margin: 0;
+    padding: 0;
+}
+
+.button2 {
+    background-image: url('../img/button2.png');
+}
+
+.button2:active {
+    background-image: url('../img/button2_pressed.png');
+}
+
+.button2_ready, .button2_tick_ready {
+    border-top: 1px solid #65431f;
+    border-right: 1px solid #65431f;
+    border-left: 1px solid #65431f;
+    height: 32px;
+    width: 27px;
+}
+
+.button2_tick {
+    background-image: url('../img/button2_tick.png');
+}
+
+.button2_tick:active {
+    background-image: url('../img/button2_tick_pressed.png');
+}
+
+.button2_tick_ready {
+    background-image: url('../img/button2_tick_ready.png');
+}
+
+#settings2_1, #settings2_2, #settings2_3, #settings2_4 {
+    border-bottom-color: white;
+}
+
+.bottom {
+    border-bottom: 1px solid #65431f;
+}
+
+#button_reset {
+    float: left;
+    background-image: url('../img/button_reset.png');
+    width: 121px;
+    height: 31px;
+    margin-top: 1px;
+    padding: 0;
+}
+
+#button_reset:active {
+    background-image: url('../img/button_reset_pressed.png');
+}
+
+#button_exit {
+    background-image: url('../img/button_exit.png');
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right:5px;
+    top:4px;
+}
+
+#button_exit:active {
+    background-image: url('../img/button_exit_pressed.png');
+}
+
+/* --------------------- helper classes --------------------- */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.hidden2 {
+    background-image: none;
+    pointer-events: none;
+}
+
+
